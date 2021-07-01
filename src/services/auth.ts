@@ -27,8 +27,6 @@ export async function signInRequest(data: SignInRequestData) {
 export async function recoverUserInformation() {
   //   await delay();
   const { "nextauth.user": user } = parseCookies();
-
-  return {
-    user,
-  };
+  console.log("RECOVERY => user", JSON.parse(user));
+  return JSON.parse(user);
 }
